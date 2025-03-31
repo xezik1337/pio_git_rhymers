@@ -2,14 +2,17 @@ package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRhymer {
 
-    private final int FAILURE_CODE = -1;
-    private final int EMPTY_INDICATOR = -1;
-    private final int FULL_INDICATOR = 11;
-    private int CAPACITY = 12;
+    private static final int FAILURE_CODE = -1;
+    private static final int EMPTY_INDICATOR = -1;
+    private static final int FULL_INDICATOR = 11;
+    private static final int CAPACITY = 12;
     private final int[] numbers = new int[CAPACITY];
 
+    private int total = -1;
 
-    public int total = -1;
+    public int getTotal() {
+        return total;
+    }
 
     public void countIn(int in) {
         if (!isFull())
